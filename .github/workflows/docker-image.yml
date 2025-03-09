@@ -36,8 +36,5 @@ jobs:
             # Stop and remove the existing container if it exists
             sudo docker stop task-app || true
             sudo docker rm task-app || true
-            while sudo docker ps -a --filter "name=task-app" | grep -q "task-app"; do
-              echo "Waiting for task-app container to be fully removed..."
-              sleep 1
-            done
+            sudo systemctl restart docker
             sudo docker run -d -p 80:8081 --name task-app --restart unless-stopped ${{ secrets.DOCKER_USERNAME }}/aws-demo:1.0
