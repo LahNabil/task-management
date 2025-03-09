@@ -36,5 +36,4 @@ jobs:
             # Stop and remove the existing container if it exists
             sudo docker stop task-app || true
             sudo docker rm task-app || true
-            sudo systemctl restart docker
             sudo docker run -d -p 80:8081 --name task-app --restart unless-stopped ${{ secrets.DOCKER_USERNAME }}/aws-demo:1.0
