@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Task Management App
+name: CI/CD Pipeline for Task Management App AWS
 
 on:
   push:
