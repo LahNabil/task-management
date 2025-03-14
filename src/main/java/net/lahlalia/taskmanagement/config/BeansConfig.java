@@ -20,7 +20,7 @@ public class BeansConfig {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         final CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(Collections.singletonList("http://taskawsstestbucket.s3-website.eu-west-3.amazonaws.com/"));
+        config.setAllowedOrigins(Collections.singletonList("https://d3l02d8x4466ef.cloudfront.net"));
         config.setAllowedHeaders(Arrays.asList(
                 HttpHeaders.ORIGIN,
                 HttpHeaders.CONTENT_TYPE,
