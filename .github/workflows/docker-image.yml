@@ -36,4 +36,4 @@ jobs:
             # Stop and remove the existing container if it exists
             sudo docker stop task-app || true
             sudo docker rm task-app || true
-            sudo docker run -d -p 443:443 --name task-app --restart unless-stopped ${{ secrets.DOCKER_USERNAME }}/aws-demo:1.0
+            sudo docker run -d -p 80:8081 -p 443:8081 --name task-app --restart unless-stopped -v /etc/ssl/certs:/etc/ssl/certs -v /etc/ssl/private:/etc/ssl/private ${{ secrets.DOCKER_USERNAME }}/aws-demo:1.0
