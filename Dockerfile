@@ -12,5 +12,5 @@ EXPOSE 8080 443
 #CMD ["java", "-Dserver.ssl.key-store=/etc/ssl/private/privkey.pem", "-Dserver.ssl.key-store-password=your-password", "-Dserver.ssl.key-alias=your-key-alias", "-jar", "demo-aws.jar"]
 CMD ["java", "-Dserver.ssl.key-store=/etc/ssl/certs/keystore.p12", \
     "-Dserver.ssl.key-store-password=password", \
-    "-Dserver.ssl.key-alias=your-key-alias", \
+    "-Dserver.ssl.key-alias=1", \
     "-jar", "demo-aws.jar"]
